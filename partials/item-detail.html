@@ -1,0 +1,24 @@
+<div ng-controller="bookController">
+
+    <h1>Book</h1>
+
+    <p><a href="/#/">&lt; back</a></p>
+
+    <div ng-if="book.title">
+
+        <p>{{book.title}}<br><em>by</em> {{book.author}}</p>
+        <p>Published in {{book.year}} by {{book.publisher}}<br><small>ISBN: {{book.isbn}}</small></p>
+
+        <h2>Review</h2>
+
+        <p>{{book.review}}</p>
+
+    </div>
+
+    <div ng-if="!book.title">
+
+        <p> No book was found.</p>
+
+    </div>
+
+</div>

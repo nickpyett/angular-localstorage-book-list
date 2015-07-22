@@ -1,0 +1,46 @@
+<div ng-controller="itemListController">
+
+    <h1>Book List</h1>
+
+	<p>There are {{list.length}} book(s) in the book list.</p>
+
+	<p>{{itemListFormMessage}}</p>
+
+	<ul ng-repeat="(key, book) in list">
+		<li><a href="/#/book/{{key}}/">{{book.title}}</a> | <button type="button" ng-click="bookEdit(key)" class="button">edit</button> | <button type="button" ng-click="bookRemove(key)" class="button">delete</button></li>
+	</ul>
+
+    <h2>{{bookFormTitle}}</h2>
+
+	<form id="bookForm" class="bookForm">
+		<div>
+			<label>Title</label><br>
+			<input type="text" ng-model="itemListForm.title">
+        </div>
+        <div>
+            <label>Author</label><br>
+            <input type="text" ng-model="itemListForm.author">
+		</div>
+        <div>
+            <label>Year</label><br>
+            <input type="text" ng-model="itemListForm.year">
+		</div>
+        <div>
+            <label>Publisher</label><br>
+            <input type="text" ng-model="itemListForm.publisher">
+		</div>
+        <div>
+            <label>ISNB</label><br>
+            <input type="text" ng-model="itemListForm.isbn">
+		</div>
+        <div>
+            <label>Review</label><br>
+            <textarea ng-model="itemListForm.review"></textarea>
+		</div>
+		<div>
+            <input type="hidden" ng-model="itemListForm.id">
+            <input type="submit" ng-click="itemListFormSubmit()" class="submit" value="Submit"> <input type="button" ng-click="bookFormReset()" class="reset" value="Cancel">
+        </div>
+	</form>
+
+</div>

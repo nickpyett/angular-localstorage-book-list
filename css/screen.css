@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.content {
+    margin: 20px auto;
+    text-align: left;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+input, textarea {
+    border: 1px solid #CCC;
+    padding: 6px;
+}
+
+.submit, .button, .reset {
+    border-radius: 4px;
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    padding: 6px 12px;
+}
+
+.button {
+    padding: 4px 8px;
+}
+
+.reset {
+    border: none;
+    color: #777;
+}
+
+.bookForm div {
+    margin-bottom: 12px;
+}
